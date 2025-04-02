@@ -2,16 +2,28 @@ spring:
   application:
     name: ms-catalogo-service
 
-  datasource:
-    url: jdbc:mysql://localhost:3306/ms_catalogo
-    username: root
-    password:
-    driver-class-name: com.mysql.cj.jdbc.Driver
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/ms_catalogo
+#    username: root
+#    password:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
 
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
+  datasource:
+    url: jdbc:h2:mem:ms_catalogo
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+    jpa:
+      database-platform: org.hibernate.dialect.H2Dialect
+    h2:
+      console:
+        enabled: true
+        path: /h2-console
 
 springdoc:
   api-docs:
