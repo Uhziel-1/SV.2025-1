@@ -1,9 +1,9 @@
 server:
 
-  port: 8081
+  port: 8082
 spring:
   application:
-    name: ms-catalogo-service
+    name: ms-producto-service
 
 #  datasource:
 #    url: jdbc:mysql://localhost:3306/ms_catalogo
@@ -17,7 +17,7 @@ spring:
 #    show-sql: true
 
   datasource:
-    url: jdbc:h2:mem:ms_catalogo
+    url: jdbc:h2:mem:ms_producto
     driver-class-name: org.h2.Driver
     username: sa
     password: password
