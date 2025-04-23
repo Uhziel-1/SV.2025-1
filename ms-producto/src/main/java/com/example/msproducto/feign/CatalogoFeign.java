@@ -9,5 +9,5 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient(name = "ms-catalogo-service", path = "/categoria")
 public interface CatalogoFeign {
     @GetMapping("/{id}")
-    public ResponseEntity<CategoriaDto> buscarCategoria(@PathVariable Integer id);
+    ResponseEntity<CategoriaDto> buscarCategoria(@PathVariable Integer id);
 }
