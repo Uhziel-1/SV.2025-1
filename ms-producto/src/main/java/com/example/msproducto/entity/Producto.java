@@ -1,9 +1,7 @@
 package com.example.msproducto.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.example.msproducto.dto.CategoriaDto;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,4 +18,6 @@ public class Producto {
     private String descripcion;
     private Double precio;
     private Integer categoriaId;
+    @Transient
+    private CategoriaDto categoriaDto;
 }
