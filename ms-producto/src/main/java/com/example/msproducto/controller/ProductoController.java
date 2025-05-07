@@ -28,7 +28,7 @@ public class ProductoController {
         return ResponseEntity.ok(productoService.actualizar(producto));
     }
     @GetMapping("/{id}")
-    public ResponseEntity<?> listById(@PathVariable(required = true) Integer id){
+    public ResponseEntity<Producto> listById(@PathVariable(required = true) Integer id){
         return ResponseEntity.ok().body(productoService.listarPorId(id).get());
     }
     @DeleteMapping("/{id}")
