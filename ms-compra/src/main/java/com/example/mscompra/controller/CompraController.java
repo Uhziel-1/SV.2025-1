@@ -16,6 +16,7 @@ public class CompraController {
 
     @GetMapping
     public ResponseEntity<List<Compra>> list() {
+        System.out.println("Listando compras");
         return ResponseEntity.ok().body(compraService.listar());
     }
     @PostMapping()

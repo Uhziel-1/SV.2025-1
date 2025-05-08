@@ -16,6 +16,7 @@ public class ProductoController {
 
     @GetMapping
     public ResponseEntity<List<Producto>> list() {
+        System.out.println("Listando productos");
         return ResponseEntity.ok().body(productoService.listar());
     }
     @PostMapping()

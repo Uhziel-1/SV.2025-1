@@ -16,6 +16,7 @@ public class CategoriaController {
 
     @GetMapping
     public ResponseEntity<List<Categoria>> list() {
+        System.out.println("Listando categorias");
         return ResponseEntity.ok().body(categoriaService.listar());
     }
     @PostMapping()

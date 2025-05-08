@@ -45,7 +45,6 @@ eureka:
     #hostname: localhost          TODO Sin Load Balancer
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
-
 resilience4j.circuitbreaker:
   instances:
     categoriaListarPorIdCB:
