@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-   name: ms-producto-service
+   name: ms-auth-service
   jpa:
     hibernate.ddl-auto: update
     generate-ddl: true
