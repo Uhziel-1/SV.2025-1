@@ -5,4 +5,11 @@ spring:
     active: development
   config:
     import: optional:configserver:http://root:123456@localhost:7070
-
+jwt:
+  secret: secret
+eureka: # Agrega esta sección
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8090/eureka # Asegúrate de que esto apunte a tu Eureka Server
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}

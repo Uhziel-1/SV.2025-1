@@ -16,11 +16,11 @@ import java.util.Optional;
 @Service
 public class AuthUserServiceImpl implements AuthUserService {
     @Autowired
-    AuthUserRepository authUserRepository;
+    private AuthUserRepository authUserRepository;
     @Autowired
-    PasswordEncoder passwordEncoder;
+    private PasswordEncoder passwordEncoder;
     @Autowired
-    JwtProvider jwtProvider;
+    private JwtProvider jwtProvider;
 
 
     @Override
